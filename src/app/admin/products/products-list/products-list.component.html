@@ -1,5 +1,3 @@
-<h1>Products</h1>
-
 <table class="table table-dark">
   <thead>
     <tr>
@@ -12,7 +10,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let product of products">
-      <td>{{product.productId}}</td>
+      <td>{{product.id}}</td>
       <td>
         <img [src]="product.productImage" alt="" width="100">
       </td>

@@ -1,0 +1,22 @@
+<div class="loader-content" fxFill>
+  <div *ngIf="!loading; else loader" fxFill>
+    <div class="loader-content__error" *ngIf="error; else success" fxLayout="column" fxLayoutAlign="center center">
+      {{error.message}}
+    </div>
+  </div>
+  <ng-template #success>
+    <div class="loader-content__content" fxFill>
+      <ng-content select="[content]"></ng-content>
+    </div>
+    <ng-template #emptyMsg>
+      <div class="loader-content__empty">
+        <ng-content select="[emptyMessage]"></ng-content>
+      </div>
+    </ng-template>
+  </ng-template>
+  <ng-template #loader>
+    <div class="loader-content__loading">
+      <app-loading></app-loading>
+    </div>
+  </ng-template>
+</div>

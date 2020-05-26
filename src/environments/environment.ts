@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   apiUrls: {
     users: 'http://www.mocky.io/v2/5ec59f3d3200007900d7483f',
-    products: 'http://www.mocky.io/v2/5ec1be882f00003700c34de1?mocky-delay=2000ms'
+    products: 'http://www.mocky.io/v2/5ecc2e9e3200002a00236093?mocky-delay=2000ms'
   }
 };
 

@@ -13,13 +13,13 @@ export class ProductsService {
   apiUrl = environment.apiUrls.products;
 
   constructor(
-    private httpClient: HttpClient
+    private http: HttpClient
   ) { }
 
-  loadAll(): Observable<Product[]> {
-    return this.httpClient.get<any[]>(this.apiUrl)
+  loadProducts(): Observable<Product[]> {
+    return this.http.get<any[]>(this.apiUrl)
       .pipe(
-        map((json: any) => json)
+        map((resp: any) => resp)
       );
   }
 }
